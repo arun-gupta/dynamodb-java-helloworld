@@ -1,0 +1,7 @@
+= DynamoDB Hello World with Java
+
+. Create DynamoDB table `Books` as explained at http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SampleData.CreateTables.html.
+. Run the application: `mvn exec:java`. This will store and read a JSON document to the database.
++
+By default, the table is assumed to be in `us-west-1` region. Alternatively, a different region can be specified as `mvn exec:java -DDYNAMODB_REGION=<region>`.
+
