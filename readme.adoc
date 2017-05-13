@@ -15,4 +15,5 @@ By default, the application thinks that the database is in `us-west-1` region. A
 mvn install -DDYNAMODB_REGION=<region>
 ```
 
+http://docs.aws.amazon.com/amazondynamodb/latest/gettingstartedguide/GettingStarted.Java.html[Getting Started Guide with Java and DynamoDB] shows simple programs to perform different DynamoDB operations.
 
