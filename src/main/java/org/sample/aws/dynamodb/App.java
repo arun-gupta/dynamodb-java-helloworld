@@ -30,13 +30,12 @@ public class App {
 		if (null != dynamodbClient)
 			return dynamodbClient;
 		
-		System.out.println(System.getenv());
-		System.out.println(System.getProperties());
-		String region = System.getenv("DYNAMODB_REGION");
+		String region = System.getProperty("DYNAMODB_REGION");
 		if (null == region) {
-			System.err.println("Region not set, default \"us-west-1\" is used");
+			System.err.println("Region not set, default \"" + Regions.US_WEST_1.name() + "\" is used");
 			region = Regions.US_WEST_1.name();
 		}
+		System.out.println("DynamoDB region: " + region);
 		
 		dynamodbClient = AmazonDynamoDBClientBuilder.standard()
 	            .withRegion(region)
